@@ -16,6 +16,7 @@
 		8D8D13EA1C01E8780018DAD6 /* CircleVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D13E91C01E8780018DAD6 /* CircleVIew.swift */; settings = {ASSET_TAGS = (); }; };
 		8D8D13EC1C022CA20018DAD6 /* trees.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13EB1C022CA20018DAD6 /* trees.png */; settings = {ASSET_TAGS = (); }; };
 		8D8D13F21C0236C10018DAD6 /* trees2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D13F11C0236C10018DAD6 /* trees2.swift */; settings = {ASSET_TAGS = (); }; };
+		8D8D13F41C024BCE0018DAD6 /* purr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13F31C024BCE0018DAD6 /* purr.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8D8D13E91C01E8780018DAD6 /* CircleVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleVIew.swift; sourceTree = "<group>"; };
 		8D8D13EB1C022CA20018DAD6 /* trees.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trees.png; sourceTree = "<group>"; };
 		8D8D13F11C0236C10018DAD6 /* trees2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trees2.swift; sourceTree = "<group>"; };
+		8D8D13F31C024BCE0018DAD6 /* purr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = purr.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				8D8D13DE1C01D6260018DAD6 /* LaunchScreen.storyboard */,
 				8D8D13E71C01E7360018DAD6 /* trrrreee.png */,
 				8D8D13EB1C022CA20018DAD6 /* trees.png */,
+				8D8D13F31C024BCE0018DAD6 /* purr.mp3 */,
 				8D8D13E11C01D6260018DAD6 /* Info.plist */,
 			);
 			path = Eleutherococcus;
@@ -139,6 +142,7 @@
 				8D8D13E81C01E7360018DAD6 /* trrrreee.png in Resources */,
 				8D8D13EC1C022CA20018DAD6 /* trees.png in Resources */,
 				8D8D13DB1C01D6260018DAD6 /* Main.storyboard in Resources */,
+				8D8D13F41C024BCE0018DAD6 /* purr.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +306,7 @@
 				8D8D13E61C01D6260018DAD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

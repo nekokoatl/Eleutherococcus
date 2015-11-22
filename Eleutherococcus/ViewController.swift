@@ -4,6 +4,7 @@
 
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -14,7 +15,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var trees2link: UIImageView!
     
+    var timestamp:NSTimeInterval?
+    var timestamp2:NSTimeInterval?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,12 +26,14 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first!
         let touchLocation = touch.locationInView(self.view)
         self.CircleViewLocation.center = touchLocation
-        
+        timestamp = touch.timestamp
   //      var treesColor: UIColor? = (UIColor(patternImage: UIImage(named: "trees.png")!))
 //        print ("touches began at point = \(touchLocation), force = \(touch.force)")
     }
@@ -35,6 +41,10 @@ class ViewController: UIViewController {
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first!
         let touchLocation = touch.locationInView(self.view)
+
+        timestamp2 = touch.timestamp
+        print(timestamp2! - timestamp!)
+
         self.CircleViewLocation.center = touchLocation
         
         
@@ -48,7 +58,10 @@ class ViewController: UIViewController {
         weightOfStuff.textColor = UIColor(red:calculateRedness(touch.force), green:0.2, blue:0.8, alpha:1)
         trees2link.alpha = calculateRedness(touch.force)
         
-//        print ("touches moved at point = \(touchLocation), force = \(touch.force)")
+//        if timestamp2! - timestamp! >= 3 {
+//            purr()
+//        }
+        
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -64,6 +77,21 @@ class ViewController: UIViewController {
         print ("touches cancelled at point = \(touchLocation), force = \(touch.force)")
 
     }
+    
+    
+    
+     func purr() {
+        print("meow")
+        // Load
+        let soundURL = NSBundle.mainBundle().URLForResource("purr", withExtension: "mp3")
+        var mySound: SystemSoundID = 0
+        AudioServicesCreateSystemSoundID(soundURL!, &mySound)
+        
+        // Play
+        AudioServicesPlaySystemSound(mySound);
+        
+    }
+
     
     
     func calculateRedness (force:CGFloat) -> CGFloat{
