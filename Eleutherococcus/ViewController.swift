@@ -41,17 +41,19 @@ class ViewController: UIViewController {
         let pressureColour  = UIColor(red:calculateRedness(touch.force), green:0.2, blue:0.5, alpha:1)
         print("force = \(touch.force)")
         self.CircleViewLocation.circleColor = pressureColour
+        self.CircleViewLocation.cornerRadii = calculateRadii(touch.force)
         self.CircleViewLocation.setNeedsDisplay()
         
         weightOfStuff.text = "\(touch.force)"
         weightOfStuff.textColor = UIColor(red:calculateRedness(touch.force), green:0.2, blue:0.8, alpha:1)
         trees2link.alpha = calculateRedness(touch.force)
+        
 //        print ("touches moved at point = \(touchLocation), force = \(touch.force)")
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches.first!
-        let touchLocation = touch.locationInView(self.view)
+   //     let touch = touches.first!
+//        let touchLocation = touch.locationInView(self.view)
 //        print ("touches ended at point = \(touchLocation), force = \(touch.force)")
 
     }
@@ -63,6 +65,7 @@ class ViewController: UIViewController {
 
     }
     
+    
     func calculateRedness (force:CGFloat) -> CGFloat{
         let forceRange:CGFloat = 6.666 - 0.0
         let colorRange:CGFloat = 1.0 - 0.0
@@ -71,6 +74,17 @@ class ViewController: UIViewController {
     }
     
 
-    
-}
+    func calculateRadii (force:CGFloat) -> CGSize {
+        let forceRange: CGFloat = 6.666 - 0.0
+        
+        let radiiWidthRange: CGFloat = CircleViewLocation.frame.width - 0.0
+        let radiiHeightRange: CGFloat = CircleViewLocation.frame.height - 0.0
+        
+        let radiiWidth: CGFloat = (((force - 0.0) * radiiWidthRange) / forceRange) + 0.0
+        let radiiHeight: CGFloat = (((force - 0.0) * radiiHeightRange) / forceRange) + 0.0
+        
+        return CGSize(width: radiiWidth, height: radiiHeight) }}
+
+
+
 

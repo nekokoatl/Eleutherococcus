@@ -9,8 +9,8 @@
 import UIKit
 
 class CircleView: UIView {
-    
     var circleColor: UIColor? = UIColor(red:0.96, green:0.77, blue:0.22, alpha:1)
+    var cornerRadii: CGSize? = CGSize(width: 0.0, height: 0.0)
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,8 +18,9 @@ class CircleView: UIView {
     }
     
     override func drawRect(rect: CGRect) {
-        let path = UIBezierPath(ovalInRect: rect)
+     let path = UIBezierPath(roundedRect: rect, byRoundingCorners: UIRectCorner.AllCorners, cornerRadii:cornerRadii!)
         self.circleColor!.setFill()
         path.fill()
     }
+    
 }
