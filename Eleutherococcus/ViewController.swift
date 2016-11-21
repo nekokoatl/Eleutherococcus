@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var trees2link: UIImageView!
     
-    var timestamp:NSTimeInterval?
-    var timestamp2:NSTimeInterval?
+    var timestamp:TimeInterval?
+    var timestamp2:TimeInterval?
 
     
     override func viewDidLoad() {
@@ -29,18 +29,18 @@ class ViewController: UIViewController {
     
     
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
-        let touchLocation = touch.locationInView(self.view)
+        let touchLocation = touch.location(in: self.view)
         self.CircleViewLocation.center = touchLocation
         timestamp = touch.timestamp
   //      var treesColor: UIColor? = (UIColor(patternImage: UIImage(named: "trees.png")!))
 //        print ("touches began at point = \(touchLocation), force = \(touch.force)")
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
-        let touchLocation = touch.locationInView(self.view)
+        let touchLocation = touch.location(in: self.view)
 
         timestamp2 = touch.timestamp
         print(timestamp2! - timestamp!)
@@ -64,16 +64,16 @@ class ViewController: UIViewController {
         
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
    //     let touch = touches.first!
 //        let touchLocation = touch.locationInView(self.view)
 //        print ("touches ended at point = \(touchLocation), force = \(touch.force)")
 
     }
     
-    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
-        let touch = touches!.first!
-        let touchLocation = touch.locationInView(self.view)
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        let touchLocation = touch.location(in: self.view)
         print ("touches cancelled at point = \(touchLocation), force = \(touch.force)")
 
     }
@@ -83,9 +83,9 @@ class ViewController: UIViewController {
      func purr() {
         print("meow")
         // Load
-        let soundURL = NSBundle.mainBundle().URLForResource("purr", withExtension: "mp3")
+        let soundURL = Bundle.main.url(forResource: "purr", withExtension: "mp3")
         var mySound: SystemSoundID = 0
-        AudioServicesCreateSystemSoundID(soundURL!, &mySound)
+        AudioServicesCreateSystemSoundID(soundURL! as CFURL, &mySound)
         
         // Play
         AudioServicesPlaySystemSound(mySound);
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
 
     
     
-    func calculateRedness (force:CGFloat) -> CGFloat{
+    func calculateRedness (_ force:CGFloat) -> CGFloat{
         let forceRange:CGFloat = 6.666 - 0.0
         let colorRange:CGFloat = 1.0 - 0.0
         let redness:CGFloat = (((force - 0.0) * colorRange) / forceRange) + 0.0
@@ -102,7 +102,7 @@ class ViewController: UIViewController {
     }
     
 
-    func calculateRadii (force:CGFloat) -> CGSize {
+    func calculateRadii (_ force:CGFloat) -> CGSize {
         let forceRange: CGFloat = 6.666 - 0.0
         
         let radiiWidthRange: CGFloat = CircleViewLocation.frame.width - 0.0

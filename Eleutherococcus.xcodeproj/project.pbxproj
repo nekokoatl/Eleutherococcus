@@ -12,11 +12,11 @@
 		8D8D13DB1C01D6260018DAD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13D91C01D6260018DAD6 /* Main.storyboard */; };
 		8D8D13DD1C01D6260018DAD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13DC1C01D6260018DAD6 /* Assets.xcassets */; };
 		8D8D13E01C01D6260018DAD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13DE1C01D6260018DAD6 /* LaunchScreen.storyboard */; };
-		8D8D13E81C01E7360018DAD6 /* trrrreee.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13E71C01E7360018DAD6 /* trrrreee.png */; settings = {ASSET_TAGS = (); }; };
-		8D8D13EA1C01E8780018DAD6 /* CircleVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D13E91C01E8780018DAD6 /* CircleVIew.swift */; settings = {ASSET_TAGS = (); }; };
-		8D8D13EC1C022CA20018DAD6 /* trees.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13EB1C022CA20018DAD6 /* trees.png */; settings = {ASSET_TAGS = (); }; };
-		8D8D13F21C0236C10018DAD6 /* trees2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D13F11C0236C10018DAD6 /* trees2.swift */; settings = {ASSET_TAGS = (); }; };
-		8D8D13F41C024BCE0018DAD6 /* purr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13F31C024BCE0018DAD6 /* purr.mp3 */; settings = {ASSET_TAGS = (); }; };
+		8D8D13E81C01E7360018DAD6 /* trrrreee.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13E71C01E7360018DAD6 /* trrrreee.png */; };
+		8D8D13EA1C01E8780018DAD6 /* CircleVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D13E91C01E8780018DAD6 /* CircleVIew.swift */; };
+		8D8D13EC1C022CA20018DAD6 /* trees.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13EB1C022CA20018DAD6 /* trees.png */; };
+		8D8D13F21C0236C10018DAD6 /* trees2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D13F11C0236C10018DAD6 /* trees2.swift */; };
+		8D8D13F41C024BCE0018DAD6 /* purr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13F31C024BCE0018DAD6 /* purr.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +111,7 @@
 					8D8D13D11C01D6260018DAD6 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 539N3V3ER3;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -273,6 +274,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nekokoatl.Eleutherococcus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -284,6 +286,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nekokoatl.Eleutherococcus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -14,11 +14,11 @@ class CircleView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
     }
     
-    override func drawRect(rect: CGRect) {
-     let path = UIBezierPath(roundedRect: rect, byRoundingCorners: UIRectCorner.AllCorners, cornerRadii:cornerRadii!)
+    override func draw(_ rect: CGRect) {
+     let path = UIBezierPath(roundedRect: rect, byRoundingCorners: UIRectCorner.allCorners, cornerRadii:cornerRadii!)
         self.circleColor!.setFill()
         path.fill()
     }
