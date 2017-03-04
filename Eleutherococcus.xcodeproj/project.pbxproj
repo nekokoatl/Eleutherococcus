@@ -12,11 +12,11 @@
 		8D8D13DB1C01D6260018DAD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13D91C01D6260018DAD6 /* Main.storyboard */; };
 		8D8D13DD1C01D6260018DAD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13DC1C01D6260018DAD6 /* Assets.xcassets */; };
 		8D8D13E01C01D6260018DAD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13DE1C01D6260018DAD6 /* LaunchScreen.storyboard */; };
-		8D8D13E81C01E7360018DAD6 /* trrrreee.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13E71C01E7360018DAD6 /* trrrreee.png */; settings = {ASSET_TAGS = (); }; };
-		8D8D13EA1C01E8780018DAD6 /* CircleVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D13E91C01E8780018DAD6 /* CircleVIew.swift */; settings = {ASSET_TAGS = (); }; };
-		8D8D13EC1C022CA20018DAD6 /* trees.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13EB1C022CA20018DAD6 /* trees.png */; settings = {ASSET_TAGS = (); }; };
-		8D8D13F21C0236C10018DAD6 /* trees2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D13F11C0236C10018DAD6 /* trees2.swift */; settings = {ASSET_TAGS = (); }; };
-		8D8D13F41C024BCE0018DAD6 /* purr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13F31C024BCE0018DAD6 /* purr.mp3 */; settings = {ASSET_TAGS = (); }; };
+		8D8D13E81C01E7360018DAD6 /* trrrreee.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13E71C01E7360018DAD6 /* trrrreee.png */; };
+		8D8D13EA1C01E8780018DAD6 /* CircleVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D13E91C01E8780018DAD6 /* CircleVIew.swift */; };
+		8D8D13EC1C022CA20018DAD6 /* trees.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13EB1C022CA20018DAD6 /* trees.png */; };
+		8D8D13F21C0236C10018DAD6 /* trees2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D13F11C0236C10018DAD6 /* trees2.swift */; };
+		8D8D13F41C024BCE0018DAD6 /* purr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D13F31C024BCE0018DAD6 /* purr.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,12 +105,13 @@
 		8D8D13CA1C01D6260018DAD6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Nekokoatl;
 				TargetAttributes = {
 					8D8D13D11C01D6260018DAD6 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 539N3V3ER3;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -195,8 +196,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -240,8 +243,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -260,6 +265,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -273,6 +279,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nekokoatl.Eleutherococcus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -284,6 +291,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nekokoatl.Eleutherococcus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
